@@ -1,0 +1,27 @@
+.logo-name {
+  font-family: montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  padding-left: 50px;
+  color: white;
+}
+.navbarEdit {
+  background-color: rgb(255, 255, 255);
+}
+
+.HeroBannerContainer {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.whoWeAre {
+
+  background-color: #eaf4fc;
+}
+.scheduleConsultation{
+
+  background-color: #eaf4fc;
+}
+.ourService{
+
+  background-color:#f0f9f4;
+}
