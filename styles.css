@@ -14,14 +14,25 @@
   justify-content: center;
 }
 .whoWeAre {
-
   background-color: #eaf4fc;
 }
-.scheduleConsultation{
-
+.scheduleConsultation {
   background-color: #eaf4fc;
 }
-.ourService{
+.ourService {
+  background-color: #f0f9f4;
+}
+.dCard {
+  border: none !important;
+}
+.card {
+  border: none !important; /* Remove border from the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important; /* Add shadow to the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+}
 
-  background-color:#f0f9f4;
+/* Style on hover */
+.card:hover {
+  transform: scale(1.05); /* Scale the card to 105% of its original size */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
 }
