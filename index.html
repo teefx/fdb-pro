@@ -17,7 +17,7 @@
 
     <nav class="navbar navbar-expand-lg navbarEdit">
       <div class="container">
-        <a class="navbar-brand" href="#"> FD&B Pro </a>
+        <a class="navbar-brand" href="index.html"> FD&B Pro </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -32,13 +32,15 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="services.html">Our Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="contact us.html">Contact</a>
             </li>
           </ul>
           <span class="navbar-text"> FD & B Pro Services </span>
@@ -48,7 +50,7 @@
     <!-- hero section -->
     <div class="container">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div class="col-10 col-sm-8 col-lg-6">
+        <div class="col-10 col-sm-8 col-lg-6 heroImage">
           <img
             src="images\hero image.svg"
             class="d-block mx-lg-auto img-fluid"
@@ -103,7 +105,7 @@
               clean, and well-maintained, allowing you to focus on what matters
               most—your business.
             </p>
-            <a href="#services" class="btn btn-primary mt-3"
+            <a href="services.html" class="btn btn-primary mt-3 mb-5"
               >Explore Our Services</a
             >
           </div>
@@ -233,64 +235,102 @@
     <section class="py-5">
       <div class="container">
         <h2 class="text-center mb-4">Our Clients</h2>
-        <div class="row justify-content-center">
-          <!-- Client 1 -->
-          <div class="col-md-3 col-sm-6 text-center mb-4">
-            <img
-              src="images\lagos.png"
-              alt=""
-              class="img-fluid"
-              style="max-height: 120px"
-            />
+        <div
+          id="clientsCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <!-- Client 1 -->
+            <div class="carousel-item active">
+              <div class="text-center">
+                <img
+                  src="images/lagos.png"
+                  alt="Client 1"
+                  class="img-fluid"
+                  style="max-height: 120px"
+                />
+              </div>
+            </div>
+            <!-- Client 2 -->
+            <div class="carousel-item">
+              <div class="text-center">
+                <img
+                  src="images/osun.png"
+                  alt="Client 2"
+                  class="img-fluid"
+                  style="max-height: 120px"
+                />
+              </div>
+            </div>
+            <!-- Client 3 -->
+            <div class="carousel-item">
+              <div class="text-center">
+                <img
+                  src="images/OYO.png"
+                  alt="Client 3"
+                  class="img-fluid"
+                  style="max-height: 120px"
+                />
+              </div>
+            </div>
+            <!-- Client 4 -->
+            <div class="carousel-item">
+              <div class="text-center">
+                <img
+                  src="images/polaris bank.png"
+                  alt="Client 4"
+                  class="img-fluid"
+                  style="max-height: 120px"
+                />
+              </div>
+            </div>
+            <!-- Client 5 -->
+            <div class="carousel-item">
+              <div class="text-center">
+                <img
+                  src="images/WEBSITE BANNER4.png"
+                  alt="Client 5"
+                  class="img-fluid"
+                  style="max-height: 120px"
+                />
+              </div>
+            </div>
+            <!-- Client 6 -->
+            <div class="carousel-item">
+              <div class="text-center">
+                <img
+                  src="images/FLEX LOGO 1.png"
+                  alt="Client 6"
+                  class="img-fluid"
+                  style="max-height: 120px"
+                />
+              </div>
+            </div>
           </div>
-          <!-- Client 2 -->
-          <div class="col-md-3 col-sm-6 text-center mb-4">
-            <img
-              src="images\osun.png"
-              alt=""
-              class="img-fluid"
-              style="max-height: 120px"
-            />
-          </div>
-          <!-- Client 3 -->
-          <div class="col-md-3 col-sm-6 text-center mb-4">
-            <img
-              src="images\OYO.png"
-              alt="Client 3"
-              class="img-fluid"
-              style="max-height: 120px"
-            />
-          </div>
-          <!-- Client 4 -->
-          <div class="col-md-3 col-sm-6 text-center mb-4">
-            <img
-              src="images\polaris bank.png"
-              alt="Client 4"
-              class="img-fluid"
-              style="max-height: 120px"
-            />
-          </div>
-          <!-- Client 5 -->
-          <div class="col-md-3 col-sm-6 text-center mb-4">
-            <img
-              src="images\WEBSITE BANNER4.png"
-              alt="Client 5"
-              class="img-fluid"
-              style="max-height: 120px"
-            />
-          </div>
-          <!-- Client 6 -->
-          <div class="col-md-3 col-sm-6 text-center mb-4">
-            <img
-              src="images\FLEX LOGO 1.png"
-              alt="Client 6"
-              class="img-fluid"
-              style="max-height: 120px"
-            />
-          </div>
+          <!-- Carousel Controls -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#clientsCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#clientsCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
     </section>
+
     <!-- Consultation Schedule Form Section -->
     <section class="py-5 scheduleConsultation">
       <div class="container">

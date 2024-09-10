@@ -63,3 +63,13 @@
 .contact-form .btn-primary:hover {
   background-color: #0056b3;
 }
+.heroImage {
+  margin-left: auto; /* Push image to the left */
+  margin-right: auto; /* Push image to the right */
+
+  top: 50%; /* Moves image 50% from the top */
+  left: 50%; /* Moves image 50% from the left */
+
+  max-width: 100%; /* Responsive image scaling */
+  height: auto;
+}
