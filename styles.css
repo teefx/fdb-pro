@@ -36,3 +36,33 @@
   transform: scale(1.05); /* Scale the card to 105% of its original size */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
 }
+/* styles.css */
+.contact-page {
+  padding: 2rem;
+}
+
+.contact-info {
+  margin-bottom: 2rem;
+}
+
+.contact-info i {
+  margin-right: 0.5rem;
+}
+
+.contact-form {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.contact-form .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+

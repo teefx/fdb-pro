@@ -68,7 +68,11 @@
             efficient, and spotless environment for your business.
           </p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
+            <button
+              type="button"
+              class="btn btn-primary btn-lg px-4 me-md-2"
+              onClick="document.getElementById('middle').scrollIntoView();"
+            >
               Schedule a Consultation
             </button>
             <button type="button" class="btn btn-outline-secondary btn-lg px-4">
@@ -231,7 +235,7 @@
         <h2 class="text-center mb-4">Our Clients</h2>
         <div class="row justify-content-center">
           <!-- Client 1 -->
-          <div class="col-md-3 col-sm-6 text-center mb-4 ">
+          <div class="col-md-3 col-sm-6 text-center mb-4">
             <img
               src="images\lagos.png"
               alt=""
@@ -284,7 +288,6 @@
               style="max-height: 120px"
             />
           </div>
-         
         </div>
       </div>
     </section>
@@ -293,8 +296,8 @@
       <div class="container">
         <h2 class="text-center mb-4">Schedule a Consultation</h2>
         <div class="row justify-content-center">
-          <div class="col-md-8">
-            <form>
+          <div class="col-md-8" id="middle">
+            <form action="/submit-consultation" method="POST">
               <!-- Name Field -->
               <div class="form-group mb-3">
                 <label for="name">Full Name</label>
@@ -302,6 +305,7 @@
                   type="text"
                   class="form-control"
                   id="name"
+                  name="full_name"
                   placeholder="Enter your full name"
                   required
                 />
@@ -314,6 +318,7 @@
                   type="email"
                   class="form-control"
                   id="email"
+                  name="email_address"
                   placeholder="Enter your email address"
                   required
                 />
@@ -326,6 +331,7 @@
                   type="tel"
                   class="form-control"
                   id="phone"
+                  name="phone_number"
                   placeholder="Enter your phone number"
                   required
                 />
@@ -334,7 +340,12 @@
               <!-- Service Interested In -->
               <div class="form-group mb-3">
                 <label for="service">Service Interested In</label>
-                <select class="form-select" id="service" required>
+                <select
+                  class="form-select"
+                  id="service"
+                  name="service_interested"
+                  required
+                >
                   <option value="" disabled selected>Select a service</option>
                   <option value="cleaning">Cleaning Services</option>
                   <option value="fumigation">Fumigation</option>
@@ -346,13 +357,25 @@
               <!-- Preferred Date Field -->
               <div class="form-group mb-3">
                 <label for="date">Preferred Consultation Date</label>
-                <input type="date" class="form-control" id="date" required />
+                <input
+                  type="date"
+                  class="form-control"
+                  id="date"
+                  name="preferred_date"
+                  required
+                />
               </div>
 
               <!-- Preferred Time Field -->
               <div class="form-group mb-3">
                 <label for="time">Preferred Time</label>
-                <input type="time" class="form-control" id="time" required />
+                <input
+                  type="time"
+                  class="form-control"
+                  id="time"
+                  name="preferred_time"
+                  required
+                />
               </div>
 
               <!-- Message Field -->
@@ -361,6 +384,7 @@
                 <textarea
                   class="form-control"
                   id="message"
+                  name="additional_information"
                   rows="4"
                   placeholder="Provide any additional details"
                 ></textarea>
