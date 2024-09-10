@@ -7,6 +7,11 @@
 .navbarEdit {
   background-color: rgb(255, 255, 255);
 }
+.navbar-brand {
+  font-family: montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: rgb(16, 0, 158);
+}
 
 .HeroBannerContainer {
   display: flex;
