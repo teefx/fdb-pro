@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <!-- Bootstrap CSS CDN -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet" />
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbarEdit">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">FD&B Pro</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Our Services</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="contact us.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <span class="navbar-text">FD & B Pro Services</span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container contact-page">
+      <h1 class="text-center mb-4">Contact Us</h1>
+
+      <div class="row">
+        <!-- Contact Information -->
+        <div class="col-lg-4 contact-info">
+          <h3>Our Office</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> 123 Company St, Business City,
+            BC 12345
+          </p>
+          <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:contact@company.com">contact@company.com</a>
+          </p>
+          <h5>Follow Us</h5>
+          <a href="#" class="mr-3"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="mr-3"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="mr-3"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-lg-8">
+          <div class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form action="/HTML/contactUs.html" method="POST">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  class="form-control"
+                  id="address"
+                  rows="4"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
