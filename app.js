@@ -4,6 +4,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const request = require("request");
 const https = require("https");
+const config = require("./config.js");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
@@ -34,7 +35,7 @@ app.post("/", function (req, res) {
 
   const options = {
     method: "POST",
-    auth: "synbyte01:c227009d09870aceeacc4cd11b37c571-us12",
+    auth: config.apiKey,
   };
   const request = https.request(url, options, function (response) {
     if (response.statusCode === 200) {
@@ -79,7 +80,7 @@ app.post("/HTML/contactUs.html", function (req, res) {
 
   const options = {
     method: "POST",
-    auth: "synbyte01:c227009d09870aceeacc4cd11b37c571-us12",
+    auth: config.apiKey,
   };
   const request = https.request(url, options, function (response) {
     if (response.statusCode === 200) {
