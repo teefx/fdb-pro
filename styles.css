@@ -10,7 +10,7 @@
 .navbar-brand {
   font-family: montserrat, Arial, Helvetica, sans-serif;
   font-weight: 600;
-  color: rgb(16, 0, 158);
+  color: rgb(16, 0, 158) !important;
 }
 
 .HeroBannerContainer {
