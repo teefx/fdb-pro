@@ -1,5 +1,5 @@
 const express = require("express");
-
+// const serverlessHttp = require("serverless-http")
 const app = express();
 const bodyParser = require("body-parser");
 const request = require("request");
@@ -76,7 +76,7 @@ app.post("/HTML/contactUs.html", function (req, res) {
   };
 
   const jsonData = JSON.stringify(data);
-  const url = "https://us12.api.mailchimp.com/3.0/lists/06c2fc061f";
+  const url = "https://us12.api.mailchimp.com/3.0/lists/06c2fc061f"; 
 
   const options = {
     method: "POST",
@@ -102,3 +102,4 @@ app.post("/HTML/contactUs.html", function (req, res) {
 app.listen(3000, function () {
   console.log("server is running on port 3000");
 });
+
