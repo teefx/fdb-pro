@@ -78,3 +78,29 @@
   max-width: 100%; /* Responsive image scaling */
   height: auto;
 }
+
+/* Custom styling for sections */
+section {
+  padding: 60px 0;
+}
+
+.service-section {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 40px;
+  margin-bottom: 30px;
+}
+.service-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.service-section h3 {
+  margin-top: 20px;
+}
+.hero-section {
+  background: url("hero-image.jpg") no-repeat center center / cover; /* Add a hero image */
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+}

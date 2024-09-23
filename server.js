@@ -1,5 +1,4 @@
 const express = require("express");
-// const serverlessHttp = require("serverless-http")
 const app = express();
 const bodyParser = require("body-parser");
 const request = require("request");
@@ -40,7 +39,7 @@ app.post("/", function (req, res) {
   };
   const request = https.request(url, options, function (response) {
     if (response.statusCode === 200) {
-      res.send("/success.html");
+      res.sendFile(__dirname + "/successful.html");
     } else {
       res.send("/failure.html");
     }
@@ -52,7 +51,6 @@ app.post("/", function (req, res) {
   request.write(jsonData);
   request.end();
   console.log(data.members[0]);
-  // res.send("Thanks for submitting your name");
 });
 
 //MAILCHIMP API FOR CONTACT US
@@ -77,7 +75,7 @@ app.post("/HTML/contactUs.html", function (req, res) {
   };
 
   const jsonData = JSON.stringify(data);
-  const url = "https://us12.api.mailchimp.com/3.0/lists/06c2fc061f"; 
+  const url = "https://us12.api.mailchimp.com/3.0/lists/06c2fc061f";
 
   const options = {
     method: "POST",
@@ -85,7 +83,7 @@ app.post("/HTML/contactUs.html", function (req, res) {
   };
   const request = https.request(url, options, function (response) {
     if (response.statusCode === 200) {
-      res.send("/success.html");
+      res.sendFile(__dirname + "/public/HTML/successful.html");
     } else {
       res.send("/failure.html");
     }
@@ -97,10 +95,49 @@ app.post("/HTML/contactUs.html", function (req, res) {
   request.write(jsonData);
   request.end();
   console.log(data.members[0]);
-  // res.send("Thanks for submitting your name");
+});
+
+app.post("/HTML/index.html", function (req, res) {
+  const firstName = req.body.full_name.split(" ")[0];
+  const lastName = req.body.full_name.split(" ")[1];
+  const email = req.body.email_address;
+  const data = {
+    members: [
+      {
+        email_address: email,
+        status: "subscribed",
+        merge_fields: {
+          PHONE: req.body.phone_number,
+          FNAME: firstName,
+          LNAME: lastName,
+        },
+      },
+    ],
+  };
+
+  const jsonData = JSON.stringify(data);
+  const url = "https://us12.api.mailchimp.com/3.0/lists/06c2fc061f";
+
+  const options = {
+    method: "POST",
+    auth: config.apiKey,
+  };
+  const request = https.request(url, options, function (response) {
+    if (response.statusCode === 200) {
+      res.sendFile(__dirname + "/successful.html");
+    } else {
+      res.send("/failure.html");
+    }
+    response.on("data", function (data) {
+      console.log(JSON.parse(data));
+    });
+  });
+
+  request.write(jsonData);
+  request.end();
+  console.log(data.members[0]);
 });
 
 app.listen(3000, function () {
   console.log("server is running on port 3000");
 });
-
