@@ -85,7 +85,7 @@ app.post("/HTML/contactUs.html", function (req, res) {
     if (response.statusCode === 200) {
       res.sendFile(__dirname + "/public/HTML/successful.html");
     } else {
-      res.send("/failure.html");
+      res.send("/public/HTML/failure.html");
     }
     response.on("data", function (data) {
       console.log(JSON.parse(data));
@@ -124,9 +124,9 @@ app.post("/HTML/index.html", function (req, res) {
   };
   const request = https.request(url, options, function (response) {
     if (response.statusCode === 200) {
-      res.sendFile(__dirname + "/successful.html");
+      res.sendFile(__dirname + "/public/HTML/successful.html");
     } else {
-      res.send("/failure.html");
+      res.send("/public/HTML/failure.html");
     }
     response.on("data", function (data) {
       console.log(JSON.parse(data));
